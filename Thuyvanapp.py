@@ -5,9 +5,18 @@ from io import BytesIO
 # Cấu hình trang web
 st.set_page_config(
     page_title="Dự Báo Mực Nước Đỉnh Lũ",
-    page_icon="🌊",
-    layout="wide"
+    page_icon="🌊",  # Bạn có thể thay bằng link ảnh PNG/JPG logo của đơn vị nếu có
+    layout="wide",
+    initial_sidebar_state="collapsed"
 )
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # Tiêu đề ứng dụng
 st.markdown("<h2 style='text-align: center; color: #1d4ed8;'>HỆ THỐNG DỰ BÁO MỰC NƯỚC ĐỈNH LŨ BẰNG PHƯƠNG TRÌNH</h2>", unsafe_allow_html=True)
